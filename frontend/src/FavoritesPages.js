@@ -28,23 +28,6 @@ const FavoritesPage = () => {
     fetchFavorites();
   }, []);
 
-  const handleFavorite = async (joke) => {
-    try {
-      const res = await axios.post("http://localhost:5000/api/favorites", {
-        joke_id: joke.id,
-        joke_content: joke.joke,
-      });
-      setErrorMessage(""); 
-      alert('Joke added to favorites');
-    } catch (err) {
-      if (err.response && err.response.data.message) {
-        setErrorMessage(err.response.data.message);
-      } else {
-        setErrorMessage("Error saving joke to favorites");
-      }
-    }
-  };
-
   return (
     <div>
       <div className="container mt-4">
@@ -60,12 +43,6 @@ const FavoritesPage = () => {
               <div className="card h-100">
                 <div className="card-body">
                   <p className="card-text">{favorite.joke_content}</p>
-                  <button
-                    className="btn btn-warning"
-                    onClick={() => handleFavorite(favorite)}
-                  >
-                    Favorite Again
-                  </button>
                 </div>
               </div>
             </div>
