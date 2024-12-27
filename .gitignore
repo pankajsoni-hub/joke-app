@@ -1,0 +1,37 @@
+# Node.js modules
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# Dependency directories
+jspm_packages/
+
+# Build output
+/dist
+/build
+/.next
+/out
+
+# Environment variables
+.env
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE/editor files
+.vscode/
+.idea/
+
+# npm package-lock or yarn lock files (if you're not using them)
+package-lock.json
+yarn.lock
+
+# Optional for testing
+coverage/
+
+# Other
+*.swp
